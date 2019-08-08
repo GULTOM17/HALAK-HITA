@@ -29,7 +29,7 @@ def tik():
     titik = [
      '.   ', '..  ', '... ']
     for o in titik:
-        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mSedang Masuk COK \x1b[1;97m' + o,
+        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mSedang Masuk broo.. \x1b[1;97m' + o,
         sys.stdout.flush()
         time.sleep(1)
 
@@ -105,7 +105,7 @@ def login():
                 keluar()
 
         if 'checkpoint' in url:
-            print '\n\x1b[1;91m[!] \x1b[1;93mAkun kena Checkpoint'
+            print '\n\x1b[1;91m[!] \x1b[1;93mMampus Akunmu kena Checkpoint'
             os.system('rm -rf login.txt')
             time.sleep(1)
             keluar()
@@ -1749,14 +1749,14 @@ def accept():
         print '\x1b[1;91m[!] Tidak ada permintaan pertemanan'
         raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
         menu_bot()
-    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu sebentar \x1b[1;97m...')
+    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPaima satokkin \x1b[1;97m...')
     print 40 * '\x1b[1;97m\xe2\x95\x90'
     for i in teman['data']:
         gas = requests.post('https://graph.facebook.com/me/friends/' + i['from']['id'] + '?access_token=' + toket)
         a = json.loads(gas.text)
         if 'error' in str(a):
-            print '\x1b[1;91m[+] \x1b[1;92mNama  \x1b[1;91m:\x1b[1;97m ' + i['from']['name']
-            print '\x1b[1;91m[+] \x1b[1;92mID    \x1b[1;91m:\x1b[1;97m ' + i['from']['id'] + '\x1b[1;91m Gagal'
+            print '\x1b[1;91m[+] \x1b[1;92mGoar  \x1b[1;91m:\x1b[1;97m ' + i['from']['name']
+            print '\x1b[1;91m[+] \x1b[1;92mID na    \x1b[1;91m:\x1b[1;97m ' + i['from']['id'] + '\x1b[1;91m Gagal'
             print 40 * '\x1b[1;97m\xe2\x95\x90'
         else:
             print '\x1b[1;91m[+] \x1b[1;92mNama  \x1b[1;91m:\x1b[1;97m ' + i['from']['name']
@@ -1781,7 +1781,7 @@ def unfriend():
         os.system('clear')
         print logo
         print 40 * '\x1b[1;97m\xe2\x95\x90'
-        jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu sebentar \x1b[1;97m...')
+        jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPaima satokkin \x1b[1;97m...')
         print 40 * '\x1b[1;97m\xe2\x95\x90'
         print '\x1b[1;97mStop \x1b[1;91mCTRL+C'
         print
@@ -1798,11 +1798,11 @@ def unfriend():
             pass
         except KeyboardInterrupt:
             print '\x1b[1;91m[!] Terhenti'
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
+            raw_input('\n\x1b[1;91m[ \x1b[1;97mMulak \x1b[1;91m]')
             menu_bot()
 
-    print '\n\x1b[1;91m[+] \x1b[1;97mSelesai'
-    raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
+    print '\n\x1b[1;91m[+] \x1b[1;97mNga sae be'
+    raw_input('\n\x1b[1;91m[ \x1b[1;97mMulak \x1b[1;91m]')
     menu_bot()
 
 
@@ -1819,15 +1819,15 @@ def lain():
     os.system('clear')
     print logo
     print 40 * '\x1b[1;97m\xe2\x95\x90'
-    print '\x1b[1;37;40m1. Buat postingan'
-    print '\x1b[1;37;40m2. Buat Wordlist'
+    print '\x1b[1;37;40m1. Bahen statusmu'
+    print '\x1b[1;37;40m2. Bahen Wordlist'
     print '\x1b[1;37;40m3. Akun Checker'
-    print '\x1b[1;37;40m4. Lihat daftar grup'
+    print '\x1b[1;37;40m4. Bereng daftar grup'
     print '\x1b[1;37;40m5. Profile Guard'
     print
     print '\x1b[1;97m  ->Coming soon<-'
     print
-    print '\x1b[1;31;40m0. Kembali'
+    print '\x1b[1;31;40m0. Mulak'
     print
     pilih_lain()
 
@@ -1835,7 +1835,7 @@ def lain():
 def pilih_lain():
     other = raw_input('\x1b[1;91m-\xe2\x96\xba\x1b[1;97m ')
     if other == '':
-        print '\x1b[1;91m[!] Jangan kosong'
+        print '\x1b[1;91m[!] Unang kosong'
         pilih_lain()
     else:
         if other == '1':
@@ -1856,7 +1856,7 @@ def pilih_lain():
                             if other == '0':
                                 menu()
                             else:
-                                print '\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + other + ' \x1b[1;91mTidak ada'
+                                print '\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + other + ' \x1b[1;91mDang adong'
                                 pilih_lain()
 
 
@@ -1873,15 +1873,15 @@ def status():
     os.system('clear')
     print logo
     print 40 * '\x1b[1;97m\xe2\x95\x90'
-    msg = raw_input('\x1b[1;91m[+] \x1b[1;92mKetik status \x1b[1;91m:\x1b[1;97m ')
+    msg = raw_input('\x1b[1;91m[+] \x1b[1;92mBahen statusmu \x1b[1;91m:\x1b[1;97m ')
     if msg == '':
-        print '\x1b[1;91m[!] Jangan kosong'
-        raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
+        print '\x1b[1;91m[!] Unang kosong'
+        raw_input('\n\x1b[1;91m[ \x1b[1;97mMulak \x1b[1;91m]')
         lain()
     else:
         res = requests.get('https://graph.facebook.com/me/feed?method=POST&message=' + msg + '&access_token=' + toket)
         op = json.loads(res.text)
-        jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu sebentar \x1b[1;97m...')
+        jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mPaima satokkin \x1b[1;97m...')
         print 40 * '\x1b[1;97m\xe2\x95\x90'
         print '\x1b[1;91m[+] \x1b[1;92mStatus ID\x1b[1;91m : \x1b[1;97m' + op['id']
         raw_input('\n\x1b[1;91m[ \x1b[1;97mKembali \x1b[1;91m]')
