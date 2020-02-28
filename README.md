@@ -1,4 +1,3 @@
 # HALAK-HITA
-HALAK HITA
-Copy dari :Pashayogi
+HALAK BATAK
 Belajar : termux 7 github
